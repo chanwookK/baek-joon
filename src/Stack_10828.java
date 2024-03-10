@@ -1,12 +1,13 @@
 import java.io.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class Stack_10828 {
     public static void main(String[] args) throws IOException {
-
         //stack 생성
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new ArrayDeque<>();
 
         //read buffer 입력버퍼
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -35,7 +36,7 @@ public class Stack_10828 {
                 status = 0;
                 switch (instruction){
                     case "pop":
-                        if(stack.empty()) {
+                        if(stack.isEmpty()) {
                             status = -1;
                             break;
                         }
@@ -45,10 +46,10 @@ public class Stack_10828 {
                         status = stack.size();
                         break;
                     case "empty":
-                        status = stack.empty()? 1:0;
+                        status = stack.isEmpty()? 1:0;
                         break;
                     case "top":
-                        if(stack.empty()){
+                        if(stack.isEmpty()){
                             status = -1;
                             break;
                         }
