@@ -3,7 +3,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 
-public class 단어 뒤집기2_17413 {
+public class 단어뒤집기2_17413 {
     public static void main(String[] args) throws IOException {
         Deque<Character> stack = new ArrayDeque<>();
         Deque<Character> queue = new ArrayDeque<>();
